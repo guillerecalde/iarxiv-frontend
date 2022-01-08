@@ -1,8 +1,17 @@
-import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 
+import '../styles/globals.css'
+
+const Noop = ({ children }: { children: React.ReactNode }) => <>{children}</>;
+
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  const Layout = (Component as any).Layout || Noop;
+
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
 
-export default MyApp
+export default MyApp;
