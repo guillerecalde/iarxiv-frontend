@@ -1,5 +1,5 @@
 type NavbarRoot = {
-  children: React.ReactNode,
+  children: React.ReactNode;
 };
 
 const NavbarRoot = ({ children }: NavbarRoot) => (

@@ -1,6 +1,6 @@
-import { IconProps } from "./Icon";
+import { IconProps } from './Icon';
 
-const ChevronsRight = ({ className = "" }: IconProps) => (
+const ChevronsRight = ({ className = '' }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -15,5 +15,3 @@ const ChevronsRight = ({ className = "" }: IconProps) => (
 );
 
 export default ChevronsRight;
-
-

@@ -14,6 +14,4 @@ const History = ({ className = '' }: IconProps) => (
   </svg>
 );
 
-
 export default History;
-

@@ -1,5 +1,3 @@
-import Link from 'next/head';
-
 import { Container, Logo } from '@components/ui';
 
 import NavbarRoot from './NavbarRoot';

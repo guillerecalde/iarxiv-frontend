@@ -2,13 +2,19 @@ import { useState } from 'react';
 import Link from 'next/link';
 import classNames from 'classnames';
 
-import { ChevronsLeft, ChevronsRight, Collection, History, Home, Wrench } from '@components/icons';
+import {
+  ChevronsLeft,
+  Collection,
+  History,
+  Home,
+  Wrench,
+} from '@components/icons';
 import { Button } from '@components/ui';
 interface SidebarLink {
-  name: string,
-  href: string,
-  icon: JSX.Element,
-};
+  name: string;
+  href: string;
+  icon: JSX.Element;
+}
 
 const LINKS: Array<SidebarLink> = [
   { name: 'Home', href: '/', icon: <Home /> },
@@ -32,7 +38,7 @@ const Sidebar = () => {
     'text-sm font-medium transition-opacity ease duration-500 ml-2',
     {
       'opacity-0': collapsed,
-    }
+    },
   );
 
   const collapseButtonClasses = classNames(
@@ -56,7 +62,6 @@ const Sidebar = () => {
                 </a>
               </Link>
             ))}
-
           </li>
         </ul>
       </nav>
