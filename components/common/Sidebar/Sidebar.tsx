@@ -38,16 +38,21 @@ const Sidebar = () => {
 
   return (
     <div className={sidebarClasses}>
-      <div className="flex flex-col mt-3">
-        {LINKS.map((link) => (
-          <Link href={link.href} key={link.name}>
-            <a className="flex items-center pl-6 h-12 mt-2 rounded text-gray-700 hover:text-sky-600 hover:fill-sky-600">
-              <span className="min-w-[1.5rem] w-6 h-6">{link.icon}</span>
-              <span className={linkTextClasses}>{link.name}</span>
-            </a>
-          </Link>
-        ))}
-      </div>
+      <nav>
+        <ul className="flex flex-col mt-3">
+          <li>
+            {LINKS.map((link) => (
+              <Link href={link.href} key={link.name}>
+                <a className="flex items-center pl-6 h-12 mt-2 rounded text-gray-700 hover:text-sky-600 hover:fill-sky-600">
+                  <span className="min-w-[1.5rem] w-6 h-6">{link.icon}</span>
+                  <span className={linkTextClasses}>{link.name}</span>
+                </a>
+              </Link>
+            ))}
+
+          </li>
+        </ul>
+      </nav>
       <Button
         variant="circle"
         className="absolute right-0 bottom-0 text-gray-700 mb-4 mr-4 hover:text-sky-600"
