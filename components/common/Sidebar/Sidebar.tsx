@@ -21,7 +21,7 @@ const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
 
   const sidebarClasses = classNames(
-    'relative overflow-x-hidden bg-white',
+    'relative overflow-x-hidden bg-white transition-all ease duration-500',
     {
       'w-48': !collapsed,
       'w-[4.5rem]': collapsed,
@@ -29,11 +29,18 @@ const Sidebar = () => {
   );
 
   const linkTextClasses = classNames(
-    'text-sm font-medium',
+    'text-sm font-medium transition-opacity ease duration-500 ml-2',
     {
-      'ml-2': !collapsed,
-      'ml-6': collapsed,
+      'opacity-0': collapsed,
     }
+  );
+
+  const collapseButtonClasses = classNames(
+    'absolute right-0 bottom-0 text-gray-700 mb-4 mr-4 hover:text-sky-600 transition-transform duration-500',
+    {
+      'rotate-180': collapsed,
+      'rotate-0': !collapsed,
+    },
   );
 
   return (
@@ -55,10 +62,10 @@ const Sidebar = () => {
       </nav>
       <Button
         variant="circle"
-        className="absolute right-0 bottom-0 text-gray-700 mb-4 mr-4 hover:text-sky-600"
+        className={collapseButtonClasses}
         onClick={() => setCollapsed(!collapsed)}
       >
-        {collapsed ? <ChevronsRight /> : <ChevronsLeft />}
+        <ChevronsLeft />
       </Button>
     </div>
   );
