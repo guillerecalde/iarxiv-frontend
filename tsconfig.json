@@ -17,6 +17,8 @@
     "incremental": true,
     "paths": {
       "@components/*": ["components/*"],
+      "@contexts/*": ["contexts/*"],
+      "@hooks": ["hooks"],
     },
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

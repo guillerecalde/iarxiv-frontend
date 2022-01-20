@@ -3,7 +3,7 @@ interface ButtonProps {
   children: React.ReactNode;
   className?: string;
   onClick: (event?: React.MouseEvent) => void;
-  variant: 'circle';
+  variant?: 'circle';
 }
 
 const Button = ({
